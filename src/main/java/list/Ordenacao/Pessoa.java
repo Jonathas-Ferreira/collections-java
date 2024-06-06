@@ -1,6 +1,6 @@
 package main.java.list.Ordenacao;
 
-public class Pessoa {
+public class Pessoa implements Comparable<Pessoa> {
 
     //atributos
 
@@ -36,5 +36,12 @@ public class Pessoa {
                 ",idade=" + idade + '\''+
                 ", altura=" + altura +
                 '}';
+    }
+
+    //Comparable
+
+    @Override
+    public int compareTo(Pessoa p){
+        return Integer.compare(idade,p.getIdade());
     }
 }
